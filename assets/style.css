@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html:hover {
+    cursor: default;
+}
+
+:root {
+    --bg: linear-gradient(rgb(207, 0, 222), rgba(177, 0, 35, 0.133));
+}
+
+::selection {
+    background-color: yellow;
+    color: black;
+}
+
+body {
+    background-color: rgb(202, 149, 252);
+}
+
+header {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    background: var(--bg);
+}
+
+h1 {
+    padding: 40px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header p {
+    padding: 30px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 3%;
+    border: 2px solid black;
+    margin: 10px;
+    width: 80%;
+    height: fit-content;
+    align-items: center;
+}
+
+.card .title {
+    width: 75%;
+    height: fit-content;
+    display: block;
+    position: absolute;
+    padding: 3px 3%;
+    border: 2px solid black;
+    top: -5%;
+    background: white;
+    text-align: center;
+}
+
+.card p {
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 3px;
+}
+
+.card .code {
+    width: 80%;
+    height:fit-content;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 4%;
+    border: 1px solid black;
+    border-radius: 25%;
+    background: var(--bg);
+    user-select: all;
+}
+
+.card .code:hover {
+    cursor: auto;
+}
+
+.card .title {
+    border-radius: 8%;
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover,
+.card:hover .title {
+    box-shadow: inset 0px 0px 8px 
+    rgb(193, 187, 0), 0 0 15px 
+    rgba(255, 255, 0, 1);
+}
+            
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .card {
+        width: 25%;
+    }
+}
